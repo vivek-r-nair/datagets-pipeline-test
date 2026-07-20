@@ -4,8 +4,8 @@ pipeline{
     stage('Checkout'){
       steps{
         sh 'echo Pulling Datagets code from GitHub'
-
-
+	// The factory is actually open this time
+	
       }
     }
     stage('Build'){
