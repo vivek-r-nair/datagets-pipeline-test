@@ -25,6 +25,7 @@ pipeline{
   post{
     always{
       sh 'echo pipeline finsished successfully sending email notification'
+      // The timeline is fixed!
     }
   }
 }
