@@ -16,7 +16,8 @@ pipeline{
     }
     stage('Test'){
       steps{
-        sh 'echo running the tests for dataagets code'
+        sh 'echo running the tests for datagets code'
+	// The door is finally unlocked
 
       }
     }
