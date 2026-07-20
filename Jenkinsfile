@@ -1,0 +1,29 @@
+pipeline{
+  agent any
+  stages{
+    stage('Checkout'){
+      steps{
+        sh 'echo Pulling Datagets code from GitHub'
+
+
+      }
+    }
+    stage('Build'){
+      steps{
+        sh 'The webhook automatically triggered this build!'
+
+      }
+    }
+    stage('Test'){
+      steps{
+        sh 'echo running the tests for dataagets code'
+
+      }
+    }
+  }
+  post{
+    always{
+      sh 'echo pipeline finsished successfully sending email notification'
+    }
+  }
+}
