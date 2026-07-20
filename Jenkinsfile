@@ -29,9 +29,13 @@ pipeline{
     }
   }
   post{
-    always{
-      sh 'echo pipeline finsished successfully sending email notification'
-      // The timeline is fixed!
+   
+        success {
+            sh "echo  SUCCESS: Build v${BUILD_NUMBER} deployed safely. Notifying the Product Team!"
+        }
+        failure {
+            sh "echo  FAILED: The pipeline broke. Sending emergency alert to the Engineering Team!"
+        }
     }
-  }
+ 
 }
