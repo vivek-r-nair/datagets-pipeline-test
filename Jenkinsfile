@@ -21,6 +21,12 @@ pipeline{
 
       }
     }
+    stage('Deploy'){
+      steps{
+        sh  "echo Deploying Datagets Build v${BUILD_NUMBER} to the Production Server!"
+
+      }
+    }
   }
   post{
     always{
