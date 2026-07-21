@@ -21,6 +21,18 @@ pipeline{
 
       }
     }
+    stage('Approve Production Deployment') {
+            steps {
+                script {
+                    timeout(time: 5, unit: 'MINUTES') {
+                        input(
+                            message: "Deploy Demo to PRODUCTION?",
+                            ok: "Approve Deployment"
+                        )
+                    }
+                }
+            }
+        }
     stage('Deploy'){
       steps{
         sh  "echo Deploying Datagets Build v${BUILD_NUMBER} to the Production Server!"
